@@ -24,13 +24,36 @@
         case "-":
             conta = (num1 - num2);
             mensagem = (`o resultado da subtração é ${conta} `);
+            break
         case "x":
             conta = (num1 * num2);
-            
+            mensagem = (`o resultado da multiplicação é ${conta} `);
+            break
+        case "/":
+            conta = (num1 / num2);
+            mensagem = (`o resultado da divisão é ${conta} `);
+            break
         default:
             break;
     }
 
+    if (conta % 2 == 0) {
+        parimpar = (`O seu número é par`);
+    } else {
+        parimpar = (`O seu número é ímpar`);
+    }
+
+    if (Math.sign (conta) == 1) {
+        posNeg = (`O seu número é positivo`);
+    } else {
+        posNeg = (`O seu número é negativo`);
+    }
+
+    if (Number.isInteger (conta) == true) {
+        fraseInteiro = " o seu número é inteiro";
+    } else {
+        fraseInteiro = " o seu número é decimal";
+    }
     //SAÍDA
-    alert(` ${conta}`);
+    alert( `O seu número é : ${conta}  Características do resultado: ${parimpar}  ${posNeg} e ${fraseInteiro}`);
 </script>
