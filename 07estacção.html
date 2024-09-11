@@ -9,59 +9,75 @@
     //ENTRADA
     const hemisferio = prompt(`Em qual hemisfério você está (Norte ou Sul)?`);
     const  mes = prompt(`qual mês atual (1 - 12)?`);
+    let estacao;
     
     //PROCESSAMENTO
-    switch (hemisferio === "Norte") {
+    if (hemisferio === "Norte"){
+    switch (mes) {
         case "12":
         case "1":
         case "2":
-            estacao = (`Inverno`);
+            estacao = "Inverno";
+            alert(`A estação do ano correspondente é ${estacao}`);
             break;
            case "3":
            case "4":
            case "5":
-           estacao = (`Primavera`);
-           break
+           estacao = "Primavera";
+           alert(`A estação do ano correspondente é ${estacao}`);
+           break;
            case "6":
            case "7":
            case "8":
-           estacao = (`Verão`);
-           break
+           estacao = "Verão";
+           alert(`A estação do ano correspondente é ${estacao}`);
+           break;
            case "9" : 
            case "10":
            case "11" :
-           estacao = (`Outono`);
+           estacao = "Outono";
+           alert(`A estação do ano correspondente é ${estacao}`);
+           break;
         default:
-            alert(`hemisfério/mês inválidos!`)
+            alert(`hemisfério/mês inválidos!`);
             break;
-    }
-
-    //Hemisferio SUL
-
-    switch (hemisferio === Sul) {
+            
+        }
+      
+    } else if (hemisferio === "Sul"){
+     switch (mes) {
         case "12":
         case "1":
         case "2":
-            estacao = (`Verão`);
+            estacao = "Verão";
+            alert(`A estação do ano correspondente é ${estacao}`);
             break;
            case "3":
            case "4":
            case "5":
-           estacao = (`Primavera`);
-           break
+           estacao = "Outono";
+           alert(`A estação do ano correspondente é ${estacao}`);
+            break;
            case "6":
            case "7":
            case "8":
-           estacao = (`Verão`);
-           break
+           estacao = "Inverno";
+           alert(`A estação do ano correspondente é ${estacao}`);
+           break;
            case "9" : 
            case "10":
            case "11" :
-           estacao = (`Outono`);
+           estacao = "Primavera";
+           alert(`A estação do ano correspondente é ${estacao}`);
+            break;
+        default:
+           alert(`hemisfério/mês inválidos!`);
+            break;
+          
+    }
+   
+}
+
+     
     
-        default:
-            break;
-    }
-    //SAÍDA
-
 </script>
