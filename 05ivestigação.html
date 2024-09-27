@@ -18,17 +18,31 @@
     const divida = prompt(`Devia para a vítima?`);
     const trabalhou = prompt (`Já trabalhou com a vítima?`);
     
+    let respostasPositivas = 0;
+  
+    if (telefonou.toLowerCase () === 'sim') respostasPositivas++;
+    if (local.toLowerCase() === 'sim') respostasPositivas++;
+    if (mora.toLowerCase () === 'sim') respostasPositivas++;
+    if (divida.toLowerCase() === 'sim')respostasPositivas++;
+    if (trabalhou.toLowerCase() === 'sim')respostasPositivas++;
 
-    //PROCESSAMENTO
-    switch (telefonou) {
-        case "sim":
-            
+    let classificacao;
+
+    switch (respostasPositivas) {
+        case 5:
+            classificacao = "Assasnino"
             break;
-    
+        case 3 || 4:
+            classificacao = "Cúmplice"
+            break
+        case 2:
+            classificacao = "Suspeita"
+            break
         default:
+            classificacao = "Inocente"
             break;
     }
-
+ 
     //SAÍDA
-
+    alert(`Considerado ${classificacao}`);
 </script>
